@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CEDB0FF8-157B-4615-BB2B-644082D68744}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LeetCodeHooHoo</RootNamespace>
+    <ProjectName>LeetCodeTestSolutions</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>true</UseFullPaths>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>true</UseFullPaths>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Ex-Sample-Test.cpp" />
+    <ClCompile Include="Ex-Sample.cpp" />
+    <ClCompile Include="Ex001-TwoSum-Test.cpp" />
+    <ClCompile Include="Ex001-TwoSum.cpp" />
+    <ClCompile Include="Ex010-RegularExpressionMatching-Test.cpp" />
+    <ClCompile Include="Ex010-RegularExpressionMatching.cpp" />
+    <ClCompile Include="Ex002-MedianofTwoSortedArrays-Test.cpp" />
+    <ClCompile Include="Ex002-MedianofTwoSortedArrays.cpp" />
+    <ClCompile Include="Ex003-LongestSubstringWithoutRepeatingCharacters-Test.cpp" />
+    <ClCompile Include="Ex003-LongestSubstringWithoutRepeatingCharacters.cpp" />
+    <ClCompile Include="Ex004-AddTwoNumbers-Test.cpp" />
+    <ClCompile Include="Ex004-AddTwoNumbers.cpp" />
+    <ClCompile Include="Ex005-LongestPalindromicSubstring-Test.cpp" />
+    <ClCompile Include="Ex005-LongestPalindromicSubstring.cpp" />
+    <ClCompile Include="Ex006-ZigZagConversion-Test.cpp" />
+    <ClCompile Include="Ex006-ZigZagConversion.cpp" />
+    <ClCompile Include="Ex007-ReverseInteger-Test.cpp" />
+    <ClCompile Include="Ex007-ReverseInteger.cpp" />
+    <ClCompile Include="Ex008-StringtoInteger-Test.cpp" />
+    <ClCompile Include="Ex008-StringtoInteger.cpp" />
+    <ClCompile Include="Ex009-PalindromeNumber-Test.cpp" />
+    <ClCompile Include="Ex009-PalindromeNumber.cpp" />
+    <ClCompile Include="Ex011-ContainerWithMostWater-Test.cpp" />
+    <ClCompile Include="Ex011-ContainerWithMostWater.cpp" />
+    <ClCompile Include="Ex012-IntegertoRoman-Test.cpp" />
+    <ClCompile Include="Ex012-IntegertoRoman.cpp" />
+    <ClCompile Include="Ex013-RomantoInteger-Test.cpp" />
+    <ClCompile Include="Ex013-RomantoInteger.cpp" />
+    <ClCompile Include="Ex014-LongestCommonPrefix-Test.cpp" />
+    <ClCompile Include="Ex014-LongestCommonPrefix.cpp" />
+    <ClCompile Include="Ex015-3Sum-Test.cpp" />
+    <ClCompile Include="Ex015-3Sum.cpp" />
+    <ClCompile Include="Ex016-3SumClosest-Test.cpp" />
+    <ClCompile Include="Ex016-3SumClosest.cpp" />
+    <ClCompile Include="Ex017-4Sum-Test.cpp" />
+    <ClCompile Include="Ex017-4Sum.cpp" />
+    <ClCompile Include="Ex018-LetterCombinationsofaPhoneNumber-Test.cpp" />
+    <ClCompile Include="Ex018-LetterCombinationsofaPhoneNumber.cpp" />
+    <ClCompile Include="Ex019-RemoveNthNodeFromEndofList-Test.cpp" />
+    <ClCompile Include="Ex019-RemoveNthNodeFromEndofList.cpp" />
+    <ClCompile Include="Ex020-ValidParentheses-Test.cpp" />
+    <ClCompile Include="Ex020-ValidParentheses.cpp" />
+    <ClCompile Include="Ex021-GenerateParentheses-Test.cpp" />
+    <ClCompile Include="Ex021-GenerateParentheses.cpp" />
+    <ClCompile Include="Ex022-MergekSortedLists-Test.cpp" />
+    <ClCompile Include="Ex022-MergekSortedLists.cpp" />
+    <ClCompile Include="Ex023-SwapNodesinPairs-Test.cpp" />
+    <ClCompile Include="Ex023-SwapNodesinPairs.cpp" />
+    <ClCompile Include="Ex024-ReverseNodesink-Group-Test.cpp" />
+    <ClCompile Include="Ex024-ReverseNodesink-Group.cpp" />
+    <ClCompile Include="Ex025-RemoveDuplicatesfromSortedArray-Test.cpp" />
+    <ClCompile Include="Ex025-RemoveDuplicatesfromSortedArray.cpp" />
+    <ClCompile Include="Ex026-RemoveElement-Test.cpp" />
+    <ClCompile Include="Ex026-RemoveElement.cpp" />
+    <ClCompile Include="Ex027-ImplementstrStr-Test.cpp" />
+    <ClCompile Include="Ex027-ImplementstrStr.cpp" />
+    <ClCompile Include="Ex028-DivideTwoIntegers-Test.cpp" />
+    <ClCompile Include="Ex028-DivideTwoIntegers.cpp" />
+    <ClCompile Include="Ex029-SubstringwithConcatenationofAllWords-Test.cpp" />
+    <ClCompile Include="Ex029-SubstringwithConcatenationofAllWords.cpp" />
+    <ClCompile Include="Ex030-NextPermutation-Test.cpp" />
+    <ClCompile Include="Ex030-NextPermutation.cpp" />
+    <ClCompile Include="Ex031-LongestValidParentheses-Test.cpp" />
+    <ClCompile Include="Ex031-LongestValidParentheses.cpp" />
+    <ClCompile Include="Ex032-SearchinRotatedSortedArray-Test.cpp" />
+    <ClCompile Include="Ex032-SearchinRotatedSortedArray.cpp" />
+    <ClCompile Include="Ex033-SearchforaRange-Test.cpp" />
+    <ClCompile Include="Ex033-SearchforaRange.cpp" />
+    <ClCompile Include="Ex034-SearchInsertPosition-Test.cpp" />
+    <ClCompile Include="Ex034-SearchInsertPosition.cpp" />
+    <ClCompile Include="Ex035-ValidSudoku-Test.cpp" />
+    <ClCompile Include="Ex035-ValidSudoku.cpp" />
+    <ClCompile Include="Ex036-SudokuSolver-Test.cpp" />
+    <ClCompile Include="Ex036-SudokuSolver.cpp" />
+    <ClCompile Include="Ex037-CountandSay-Test.cpp" />
+    <ClCompile Include="Ex037-CountandSay.cpp" />
+    <ClCompile Include="Ex038-CombinationSum-Test.cpp" />
+    <ClCompile Include="Ex038-CombinationSum.cpp" />
+    <ClCompile Include="Ex039-CombinationSumII-Test.cpp" />
+    <ClCompile Include="Ex039-CombinationSumII.cpp" />
+    <ClCompile Include="Ex040-FirstMissingPositive-Test.cpp" />
+    <ClCompile Include="Ex040-FirstMissingPositive.cpp" />
+    <ClCompile Include="Ex041-TrappingRainWater-Test.cpp" />
+    <ClCompile Include="Ex041-TrappingRainWater.cpp" />
+    <ClCompile Include="Ex042-MultiplyStrings-Test.cpp" />
+    <ClCompile Include="Ex042-MultiplyStrings.cpp" />
+    <ClCompile Include="Ex043-WildcardMatching-Test.cpp" />
+    <ClCompile Include="Ex043-WildcardMatching.cpp" />
+    <ClCompile Include="Ex044-JumpGameII-Test.cpp" />
+    <ClCompile Include="Ex044-JumpGameII.cpp" />
+    <ClCompile Include="Ex045-Permutations-Test.cpp" />
+    <ClCompile Include="Ex045-Permutations.cpp" />
+    <ClCompile Include="Ex046-PermutationsII-Test.cpp" />
+    <ClCompile Include="Ex046-PermutationsII.cpp" />
+    <ClCompile Include="Ex047-RotateImage-Test.cpp" />
+    <ClCompile Include="Ex047-RotateImage.cpp" />
+    <ClCompile Include="Ex048-Anagrams-Test.cpp" />
+    <ClCompile Include="Ex048-Anagrams.cpp" />
+    <ClCompile Include="Ex049-Pow%28x_n%29-Test.cpp" />
+    <ClCompile Include="Ex049-Pow%28x_n%29.cpp" />
+    <ClCompile Include="Ex050-N-Queens-Test.cpp" />
+    <ClCompile Include="Ex050-N-Queens.cpp" />
+    <ClCompile Include="Ex051-N-QueensII-Test.cpp" />
+    <ClCompile Include="Ex051-N-QueensII.cpp" />
+    <ClCompile Include="Ex052-MaximumSubarray-Test.cpp" />
+    <ClCompile Include="Ex052-MaximumSubarray.cpp" />
+    <ClCompile Include="Ex053-SpiralMatrix-Test.cpp" />
+    <ClCompile Include="Ex053-SpiralMatrix.cpp" />
+    <ClCompile Include="Ex054-JumpGame-Test.cpp" />
+    <ClCompile Include="Ex054-JumpGame.cpp" />
+    <ClCompile Include="Ex055-MergeIntervals-Test.cpp" />
+    <ClCompile Include="Ex055-MergeIntervals.cpp" />
+    <ClCompile Include="Ex056-InsertInterval-Test.cpp" />
+    <ClCompile Include="Ex056-InsertInterval.cpp" />
+    <ClCompile Include="Ex057-LengthofLastWord-Test.cpp" />
+    <ClCompile Include="Ex057-LengthofLastWord.cpp" />
+    <ClCompile Include="Ex058-SpiralMatrixII-Test.cpp" />
+    <ClCompile Include="Ex058-SpiralMatrixII.cpp" />
+    <ClCompile Include="Ex059-PermutationSequence-Test.cpp" />
+    <ClCompile Include="Ex059-PermutationSequence.cpp" />
+    <ClCompile Include="Ex060-RotateList-Test.cpp" />
+    <ClCompile Include="Ex060-RotateList.cpp" />
+    <ClCompile Include="Ex061-UniquePaths-Test.cpp" />
+    <ClCompile Include="Ex061-UniquePaths.cpp" />
+    <ClCompile Include="Ex062-UniquePathsII-Test.cpp" />
+    <ClCompile Include="Ex062-UniquePathsII.cpp" />
+    <ClCompile Include="Ex063-MinimumPathSum-Test.cpp" />
+    <ClCompile Include="Ex063-MinimumPathSum.cpp" />
+    <ClCompile Include="Ex065-AddBinary-Test.cpp" />
+    <ClCompile Include="Ex065-AddBinary.cpp" />
+    <ClCompile Include="Ex066-ValidNumber-Test.cpp" />
+    <ClCompile Include="Ex066-ValidNumber.cpp" />
+    <ClCompile Include="Ex067-PlusOne-Test.cpp" />
+    <ClCompile Include="Ex067-PlusOne.cpp" />
+    <ClCompile Include="Ex068-TextJustification-Test.cpp" />
+    <ClCompile Include="Ex068-TextJustification.cpp" />
+    <ClCompile Include="Ex069-Sqrt%28x%29-Test.cpp" />
+    <ClCompile Include="Ex069-Sqrt%28x%29.cpp" />
+    <ClCompile Include="Ex070-ClimbingStairs-Test.cpp" />
+    <ClCompile Include="Ex070-ClimbingStairs.cpp" />
+    <ClCompile Include="Ex071-SimplifyPath-Test.cpp" />
+    <ClCompile Include="Ex071-SimplifyPath.cpp" />
+    <ClCompile Include="Ex072-EditDistance.cpp" />
+    <ClCompile Include="Ex072-EditDistance-Test.cpp" />
+    <ClCompile Include="Ex073-SetMatrixZeroes-Test.cpp" />
+    <ClCompile Include="Ex073-SetMatrixZeroes.cpp" />
+    <ClCompile Include="Ex074-Searcha2DMatrix-Test.cpp" />
+    <ClCompile Include="Ex074-Searcha2DMatrix.cpp" />
+    <ClCompile Include="Ex075-SortColors-Test.cpp" />
+    <ClCompile Include="Ex075-SortColors.cpp" />
+    <ClCompile Include="Ex076-MinimumWindowSubstring-Test.cpp" />
+    <ClCompile Include="Ex076-MinimumWindowSubstring.cpp" />
+    <ClCompile Include="Ex077-Combinations-Test.cpp" />
+    <ClCompile Include="Ex077-Combinations.cpp" />
+    <ClCompile Include="Ex078-Subsets-Test.cpp" />
+    <ClCompile Include="Ex078-Subsets.cpp" />
+    <ClCompile Include="Ex079-WordSearch-Test.cpp" />
+    <ClCompile Include="Ex079-WordSearch.cpp" />
+    <ClCompile Include="Ex080-RemoveDuplicatesfromSortedArrayII-Test.cpp" />
+    <ClCompile Include="Ex080-RemoveDuplicatesfromSortedArrayII.cpp" />
+    <ClCompile Include="Ex081-SearchinRotatedSortedArrayII-Test.cpp" />
+    <ClCompile Include="Ex081-SearchinRotatedSortedArrayII.cpp" />
+    <ClCompile Include="Ex082-RemoveDuplicatesfromSortedList-Test.cpp" />
+    <ClCompile Include="Ex082-RemoveDuplicatesfromSortedList.cpp" />
+    <ClCompile Include="Ex083-RemoveDuplicatesfromSortedListII-Test.cpp" />
+    <ClCompile Include="Ex083-RemoveDuplicatesfromSortedListII.cpp" />
+    <ClCompile Include="Ex084-LargestRectangleinHistogram-Test.cpp" />
+    <ClCompile Include="Ex084-LargestRectangleinHistogram.cpp" />
+    <ClCompile Include="Ex085-MaximalRectangle-Test.cpp" />
+    <ClCompile Include="Ex085-MaximalRectangle.cpp" />
+    <ClCompile Include="Ex086-PartitionList-Test.cpp" />
+    <ClCompile Include="Ex086-PartitionList.cpp" />
+    <ClCompile Include="Ex087-ScrambleString-Test.cpp" />
+    <ClCompile Include="Ex087-ScrambleString.cpp" />
+    <ClCompile Include="Ex088-MergeSortedArray-Test.cpp" />
+    <ClCompile Include="Ex088-MergeSortedArray.cpp" />
+    <ClCompile Include="Ex089-GrayCode-Test.cpp" />
+    <ClCompile Include="Ex089-GrayCode.cpp" />
+    <ClCompile Include="Ex090-DecodeWays-Test.cpp" />
+    <ClCompile Include="Ex090-DecodeWays.cpp" />
+    <ClCompile Include="Ex091-SubsetsII-Test.cpp" />
+    <ClCompile Include="Ex091-SubsetsII.cpp" />
+    <ClCompile Include="Ex092-ReverseLinkedListII-Test.cpp" />
+    <ClCompile Include="Ex092-ReverseLinkedListII.cpp" />
+    <ClCompile Include="Ex093-RestoreIPAddresses-Test.cpp" />
+    <ClCompile Include="Ex093-RestoreIPAddresses.cpp" />
+    <ClCompile Include="Ex094-BinaryTreeInorderTraversal-Test.cpp" />
+    <ClCompile Include="Ex094-BinaryTreeInorderTraversal.cpp" />
+    <ClCompile Include="Ex095-UniqueBinarySearchTrees-Test.cpp" />
+    <ClCompile Include="Ex095-UniqueBinarySearchTrees.cpp" />
+    <ClCompile Include="Ex096-UniqueBinarySearchTreesII-Test.cpp" />
+    <ClCompile Include="Ex096-UniqueBinarySearchTreesII.cpp" />
+    <ClCompile Include="Ex097-InterleavingString-Test.cpp" />
+    <ClCompile Include="Ex097-InterleavingString.cpp" />
+    <ClCompile Include="Ex098-ValidateBinarySearchTree-Test.cpp" />
+    <ClCompile Include="Ex098-ValidateBinarySearchTree.cpp" />
+    <ClCompile Include="Ex099-RecoverBinarySearchTree-Test.cpp" />
+    <ClCompile Include="Ex099-RecoverBinarySearchTree.cpp" />
+    <ClCompile Include="Ex100-SameTree-Test.cpp" />
+    <ClCompile Include="Ex100-SameTree.cpp" />
+    <ClCompile Include="Ex101-SymmetricTree-Test.cpp" />
+    <ClCompile Include="Ex101-SymmetricTree.cpp" />
+    <ClCompile Include="Ex102-BinaryTreeLevelOrderTraversal-Test.cpp" />
+    <ClCompile Include="Ex102-BinaryTreeLevelOrderTraversal.cpp" />
+    <ClCompile Include="Ex103-BinaryTreeZigzagLevelOrderTraversal-Test.cpp" />
+    <ClCompile Include="Ex103-BinaryTreeZigzagLevelOrderTraversal.cpp" />
+    <ClCompile Include="Ex104-MaximumDepthofBinaryTree-Test.cpp" />
+    <ClCompile Include="Ex104-MaximumDepthofBinaryTree.cpp" />
+    <ClCompile Include="Ex105-ConstructBinaryTreefromPreorderandInorderTraversal-Test.cpp" />
+    <ClCompile Include="Ex105-ConstructBinaryTreefromPreorderandInorderTraversal.cpp" />
+    <ClCompile Include="Ex106-ConstructBinaryTreefromInorderandPostorderTraversal-Test.cpp" />
+    <ClCompile Include="Ex106-ConstructBinaryTreefromInorderandPostorderTraversal.cpp" />
+    <ClCompile Include="Ex107-BinaryTreeLevelOrderTraversalII-Test.cpp" />
+    <ClCompile Include="Ex107-BinaryTreeLevelOrderTraversalII.cpp" />
+    <ClCompile Include="Ex108-ConvertSortedArraytoBinarySearchTree-Test.cpp" />
+    <ClCompile Include="Ex108-ConvertSortedArraytoBinarySearchTree.cpp" />
+    <ClCompile Include="Ex109-ConvertSortedListtoBinarySearchTree-Test.cpp" />
+    <ClCompile Include="Ex109-ConvertSortedListtoBinarySearchTree.cpp" />
+    <ClCompile Include="Ex110-BalancedBinaryTree-Test.cpp" />
+    <ClCompile Include="Ex110-BalancedBinaryTree.cpp" />
+    <ClCompile Include="Ex111-MinimumDepthofBinaryTree-Test.cpp" />
+    <ClCompile Include="Ex111-MinimumDepthofBinaryTree.cpp" />
+    <ClCompile Include="Ex112-PathSum-Test.cpp" />
+    <ClCompile Include="Ex112-PathSum.cpp" />
+    <ClCompile Include="Ex113-PathSumII-Test.cpp" />
+    <ClCompile Include="Ex113-PathSumII.cpp" />
+    <ClCompile Include="Ex114-FlattenBinaryTreetoLinkedList-Test.cpp" />
+    <ClCompile Include="Ex114-FlattenBinaryTreetoLinkedList.cpp" />
+    <ClCompile Include="Ex115-DistinctSubsequences-Test.cpp" />
+    <ClCompile Include="Ex115-DistinctSubsequences.cpp" />
+    <ClCompile Include="Ex116-PopulatingNextRightPointersinEachNode-Test.cpp" />
+    <ClCompile Include="Ex116-PopulatingNextRightPointersinEachNode.cpp" />
+    <ClCompile Include="Ex117-PopulatingNextRightPointersinEachNodeII-Test.cpp" />
+    <ClCompile Include="Ex117-PopulatingNextRightPointersinEachNodeII.cpp" />
+    <ClCompile Include="Ex118-PascalsTriangle-Test.cpp" />
+    <ClCompile Include="Ex118-PascalsTriangle.cpp" />
+    <ClCompile Include="Ex119-PascalsTriangleII-Test.cpp" />
+    <ClCompile Include="Ex119-PascalsTriangleII.cpp" />
+    <ClCompile Include="Ex120-Triangle-Test.cpp" />
+    <ClCompile Include="Ex120-Triangle.cpp" />
+    <ClCompile Include="Ex121-BestTimetoBuyandSellStock-Test.cpp" />
+    <ClCompile Include="Ex121-BestTimetoBuyandSellStock.cpp" />
+    <ClCompile Include="Ex122-BestTimetoBuyandSellStockII-Test.cpp" />
+    <ClCompile Include="Ex122-BestTimetoBuyandSellStockII.cpp" />
+    <ClCompile Include="Ex123-BestTimetoBuyandSellStockIII-Test.cpp" />
+    <ClCompile Include="Ex123-BestTimetoBuyandSellStockIII.cpp" />
+    <ClCompile Include="Ex124-BinaryTreeMaximumPathSum-Test.cpp" />
+    <ClCompile Include="Ex124-BinaryTreeMaximumPathSum.cpp" />
+    <ClCompile Include="Ex125-ValidPalindrome-Test.cpp" />
+    <ClCompile Include="Ex125-ValidPalindrome.cpp" />
+    <ClCompile Include="Ex126-WordLadder-Test.cpp" />
+    <ClCompile Include="Ex126-WordLadder.cpp" />
+    <ClCompile Include="Ex127-WordLadderII-Test.cpp" />
+    <ClCompile Include="Ex127-WordLadderII.cpp" />
+    <ClCompile Include="Ex128-LongestConsecutiveSequence-Test.cpp" />
+    <ClCompile Include="Ex128-LongestConsecutiveSequence.cpp" />
+    <ClCompile Include="Ex129-SumRoottoLeafNumbers-Test.cpp" />
+    <ClCompile Include="Ex129-SumRoottoLeafNumbers.cpp" />
+    <ClCompile Include="Ex130-SurroundedRegions-Test.cpp" />
+    <ClCompile Include="Ex130-SurroundedRegions.cpp" />
+    <ClCompile Include="Ex131-PalindromePartitioning-Test.cpp" />
+    <ClCompile Include="Ex131-PalindromePartitioning.cpp" />
+    <ClCompile Include="Ex132-PalindromePartitioningII-Test.cpp" />
+    <ClCompile Include="Ex132-PalindromePartitioningII.cpp" />
+    <ClCompile Include="Ex133-CloneGraph-Test.cpp" />
+    <ClCompile Include="Ex133-CloneGraph.cpp" />
+    <ClCompile Include="Ex134-GasStation-Test.cpp" />
+    <ClCompile Include="Ex134-GasStation.cpp" />
+    <ClCompile Include="Ex135-Candy-Test.cpp" />
+    <ClCompile Include="Ex135-Candy.cpp" />
+    <ClCompile Include="Ex136-SingleNumber-Test.cpp" />
+    <ClCompile Include="Ex136-SingleNumber.cpp" />
+    <ClCompile Include="Ex137-SingleNumberII-Test.cpp" />
+    <ClCompile Include="Ex137-SingleNumberII.cpp" />
+    <ClCompile Include="Ex138-CopyListwithRandomPointer-Test.cpp" />
+    <ClCompile Include="Ex138-CopyListwithRandomPointer.cpp" />
+    <ClCompile Include="Ex139-WordBreak-Test.cpp" />
+    <ClCompile Include="Ex139-WordBreak.cpp" />
+    <ClCompile Include="Ex140-WordBreakII-Test.cpp" />
+    <ClCompile Include="Ex140-WordBreakII.cpp" />
+    <ClCompile Include="Ex141-LinkedListCycle-Test.cpp" />
+    <ClCompile Include="Ex141-LinkedListCycle.cpp" />
+    <ClCompile Include="Ex142-LinkedListCycleII-Test.cpp" />
+    <ClCompile Include="Ex142-LinkedListCycleII.cpp" />
+    <ClCompile Include="Ex143-ReorderList-Test.cpp" />
+    <ClCompile Include="Ex143-ReorderList.cpp" />
+    <ClCompile Include="Ex144-BinaryTreePreorderTraversal-Test.cpp" />
+    <ClCompile Include="Ex144-BinaryTreePreorderTraversal.cpp" />
+    <ClCompile Include="Ex145-BinaryTreePostorderTraversal-Test.cpp" />
+    <ClCompile Include="Ex145-BinaryTreePostorderTraversal.cpp" />
+    <ClCompile Include="Ex146-LRUCache-Test.cpp" />
+    <ClCompile Include="Ex146-LRUCache.cpp" />
+    <ClCompile Include="Ex147-InsertionSortList-Test.cpp" />
+    <ClCompile Include="Ex147-InsertionSortList.cpp" />
+    <ClCompile Include="Ex148-SortList-Test.cpp" />
+    <ClCompile Include="Ex148-SortList.cpp" />
+    <ClCompile Include="Ex149-MaxPointsonaLine-Test.cpp" />
+    <ClCompile Include="Ex149-MaxPointsonaLine.cpp" />
+    <ClCompile Include="Ex150-EvaluateReversePolishNotation-Test.cpp" />
+    <ClCompile Include="Ex150-EvaluateReversePolishNotation.cpp" />
+    <ClCompile Include="Ex064-MergeTwoSortedLists-Test.cpp" />
+    <ClCompile Include="Ex064-MergeTwoSortedLists.cpp" />
+    <ClCompile Include="UnitTestSample.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Commons.h" />
+    <ClInclude Include="Ex-Sample.h" />
+    <ClInclude Include="Ex001-TwoSum.h" />
+    <ClInclude Include="Ex010-RegularExpressionMatching.h" />
+    <ClInclude Include="Ex002-MedianofTwoSortedArrays.h" />
+    <ClInclude Include="Ex003-LongestSubstringWithoutRepeatingCharacters.h" />
+    <ClInclude Include="Ex004-AddTwoNumbers.h" />
+    <ClInclude Include="Ex005-LongestPalindromicSubstring.h" />
+    <ClInclude Include="Ex006-ZigZagConversion.h" />
+    <ClInclude Include="Ex007-ReverseInteger.h" />
+    <ClInclude Include="Ex008-StringtoInteger.h" />
+    <ClInclude Include="Ex009-PalindromeNumber.h" />
+    <ClInclude Include="Ex015-3Sum.h" />
+    <ClInclude Include="Ex101-SymmetricTree.h" />
+    <ClInclude Include="Ex102-BinaryTreeLevelOrderTraversal.h" />
+    <ClInclude Include="Ex103-BinaryTreeZigzagLevelOrderTraversal.h" />
+    <ClInclude Include="Ex104-MaximumDepthofBinaryTree.h" />
+    <ClInclude Include="Ex105-ConstructBinaryTreefromPreorderandInorderTraversal.h" />
+    <ClInclude Include="Ex106-ConstructBinaryTreefromInorderandPostorderTraversal.h" />
+    <ClInclude Include="Ex107-BinaryTreeLevelOrderTraversalII.h" />
+    <ClInclude Include="Ex108-ConvertSortedArraytoBinarySearchTree.h" />
+    <ClInclude Include="Ex109-ConvertSortedListtoBinarySearchTree.h" />
+    <ClInclude Include="Ex110-BalancedBinaryTree.h" />
+    <ClInclude Include="Ex011-ContainerWithMostWater.h" />
+    <ClInclude Include="Ex111-MinimumDepthofBinaryTree.h" />
+    <ClInclude Include="Ex112-PathSum.h" />
+    <ClInclude Include="Ex113-PathSumII.h" />
+    <ClInclude Include="Ex114-FlattenBinaryTreetoLinkedList.h" />
+    <ClInclude Include="Ex115-DistinctSubsequences.h" />
+    <ClInclude Include="Ex116-PopulatingNextRightPointersinEachNode.h" />
+    <ClInclude Include="Ex117-PopulatingNextRightPointersinEachNodeII.h" />
+    <ClInclude Include="Ex118-PascalsTriangle.h" />
+    <ClInclude Include="Ex119-PascalsTriangleII.h" />
+    <ClInclude Include="Ex120-Triangle.h" />
+    <ClInclude Include="Ex012-IntegertoRoman.h" />
+    <ClInclude Include="Ex121-BestTimetoBuyandSellStock.h" />
+    <ClInclude Include="Ex122-BestTimetoBuyandSellStockII.h" />
+    <ClInclude Include="Ex123-BestTimetoBuyandSellStockIII.h" />
+    <ClInclude Include="Ex124-BinaryTreeMaximumPathSum.h" />
+    <ClInclude Include="Ex125-ValidPalindrome.h" />
+    <ClInclude Include="Ex126-WordLadder.h" />
+    <ClInclude Include="Ex127-WordLadderII.h" />
+    <ClInclude Include="Ex128-LongestConsecutiveSequence.h" />
+    <ClInclude Include="Ex129-SumRoottoLeafNumbers.h" />
+    <ClInclude Include="Ex130-SurroundedRegions.h" />
+    <ClInclude Include="Ex013-RomantoInteger.h" />
+    <ClInclude Include="Ex131-PalindromePartitioning.h" />
+    <ClInclude Include="Ex132-PalindromePartitioningII.h" />
+    <ClInclude Include="Ex133-CloneGraph.h" />
+    <ClInclude Include="Ex134-GasStation.h" />
+    <ClInclude Include="Ex135-Candy.h" />
+    <ClInclude Include="Ex136-SingleNumber.h" />
+    <ClInclude Include="Ex137-SingleNumberII.h" />
+    <ClInclude Include="Ex138-CopyListwithRandomPointer.h" />
+    <ClInclude Include="Ex139-WordBreak.h" />
+    <ClInclude Include="Ex140-WordBreakII.h" />
+    <ClInclude Include="Ex014-LongestCommonPrefix.h" />
+    <ClInclude Include="Ex141-LinkedListCycle.h" />
+    <ClInclude Include="Ex016-3SumClosest.h" />
+    <ClInclude Include="Ex017-4Sum.h" />
+    <ClInclude Include="Ex018-LetterCombinationsofaPhoneNumber.h" />
+    <ClInclude Include="Ex019-RemoveNthNodeFromEndofList.h" />
+    <ClInclude Include="Ex020-ValidParentheses.h" />
+    <ClInclude Include="Ex021-GenerateParentheses.h" />
+    <ClInclude Include="Ex022-MergekSortedLists.h" />
+    <ClInclude Include="Ex023-SwapNodesinPairs.h" />
+    <ClInclude Include="Ex024-ReverseNodesink-Group.h" />
+    <ClInclude Include="Ex025-RemoveDuplicatesfromSortedArray.h" />
+    <ClInclude Include="Ex026-RemoveElement.h" />
+    <ClInclude Include="Ex027-ImplementstrStr.h" />
+    <ClInclude Include="Ex028-DivideTwoIntegers.h" />
+    <ClInclude Include="Ex029-SubstringwithConcatenationofAllWords.h" />
+    <ClInclude Include="Ex030-NextPermutation.h" />
+    <ClInclude Include="Ex031-LongestValidParentheses.h" />
+    <ClInclude Include="Ex032-SearchinRotatedSortedArray.h" />
+    <ClInclude Include="Ex033-SearchforaRange.h" />
+    <ClInclude Include="Ex034-SearchInsertPosition.h" />
+    <ClInclude Include="Ex035-ValidSudoku.h" />
+    <ClInclude Include="Ex036-SudokuSolver.h" />
+    <ClInclude Include="Ex037-CountandSay.h" />
+    <ClInclude Include="Ex038-CombinationSum.h" />
+    <ClInclude Include="Ex039-CombinationSumII.h" />
+    <ClInclude Include="Ex040-FirstMissingPositive.h" />
+    <ClInclude Include="Ex041-TrappingRainWater.h" />
+    <ClInclude Include="Ex042-MultiplyStrings.h" />
+    <ClInclude Include="Ex043-WildcardMatching.h" />
+    <ClInclude Include="Ex044-JumpGameII.h" />
+    <ClInclude Include="Ex045-Permutations.h" />
+    <ClInclude Include="Ex046-PermutationsII.h" />
+    <ClInclude Include="Ex047-RotateImage.h" />
+    <ClInclude Include="Ex048-Anagrams.h" />
+    <ClInclude Include="Ex049-Pow%28x_n%29.h" />
+    <ClInclude Include="Ex050-N-Queens.h" />
+    <ClInclude Include="Ex051-N-QueensII.h" />
+    <ClInclude Include="Ex052-MaximumSubarray.h" />
+    <ClInclude Include="Ex053-SpiralMatrix.h" />
+    <ClInclude Include="Ex054-JumpGame.h" />
+    <ClInclude Include="Ex055-MergeIntervals.h" />
+    <ClInclude Include="Ex056-InsertInterval.h" />
+    <ClInclude Include="Ex057-LengthofLastWord.h" />
+    <ClInclude Include="Ex058-SpiralMatrixII.h" />
+    <ClInclude Include="Ex059-PermutationSequence.h" />
+    <ClInclude Include="Ex060-RotateList.h" />
+    <ClInclude Include="Ex061-UniquePaths.h" />
+    <ClInclude Include="Ex062-UniquePathsII.h" />
+    <ClInclude Include="Ex063-MinimumPathSum.h" />
+    <ClInclude Include="Ex065-AddBinary.h" />
+    <ClInclude Include="Ex066-ValidNumber.h" />
+    <ClInclude Include="Ex067-PlusOne.h" />
+    <ClInclude Include="Ex068-TextJustification.h" />
+    <ClInclude Include="Ex069-Sqrt%28x%29.h" />
+    <ClInclude Include="Ex070-ClimbingStairs.h" />
+    <ClInclude Include="Ex071-SimplifyPath.h" />
+    <ClInclude Include="Ex072-EditDistance.h" />
+    <ClInclude Include="Ex073-SetMatrixZeroes.h" />
+    <ClInclude Include="Ex074-Searcha2DMatrix.h" />
+    <ClInclude Include="Ex075-SortColors.h" />
+    <ClInclude Include="Ex076-MinimumWindowSubstring.h" />
+    <ClInclude Include="Ex077-Combinations.h" />
+    <ClInclude Include="Ex078-Subsets.h" />
+    <ClInclude Include="Ex079-WordSearch.h" />
+    <ClInclude Include="Ex080-RemoveDuplicatesfromSortedArrayII.h" />
+    <ClInclude Include="Ex081-SearchinRotatedSortedArrayII.h" />
+    <ClInclude Include="Ex082-RemoveDuplicatesfromSortedList.h" />
+    <ClInclude Include="Ex083-RemoveDuplicatesfromSortedListII.h" />
+    <ClInclude Include="Ex084-LargestRectangleinHistogram.h" />
+    <ClInclude Include="Ex085-MaximalRectangle.h" />
+    <ClInclude Include="Ex086-PartitionList.h" />
+    <ClInclude Include="Ex087-ScrambleString.h" />
+    <ClInclude Include="Ex088-MergeSortedArray.h" />
+    <ClInclude Include="Ex089-GrayCode.h" />
+    <ClInclude Include="Ex090-DecodeWays.h" />
+    <ClInclude Include="Ex091-SubsetsII.h" />
+    <ClInclude Include="Ex092-ReverseLinkedListII.h" />
+    <ClInclude Include="Ex093-RestoreIPAddresses.h" />
+    <ClInclude Include="Ex094-BinaryTreeInorderTraversal.h" />
+    <ClInclude Include="Ex095-UniqueBinarySearchTrees.h" />
+    <ClInclude Include="Ex096-UniqueBinarySearchTreesII.h" />
+    <ClInclude Include="Ex097-InterleavingString.h" />
+    <ClInclude Include="Ex098-ValidateBinarySearchTree.h" />
+    <ClInclude Include="Ex099-RecoverBinarySearchTree.h" />
+    <ClInclude Include="Ex100-SameTree.h" />
+    <ClInclude Include="Ex142-LinkedListCycleII.h" />
+    <ClInclude Include="Ex143-ReorderList.h" />
+    <ClInclude Include="Ex144-BinaryTreePreorderTraversal.h" />
+    <ClInclude Include="Ex145-BinaryTreePostorderTraversal.h" />
+    <ClInclude Include="Ex146-LRUCache.h" />
+    <ClInclude Include="Ex147-InsertionSortList.h" />
+    <ClInclude Include="Ex148-SortList.h" />
+    <ClInclude Include="Ex149-MaxPointsonaLine.h" />
+    <ClInclude Include="Ex150-EvaluateReversePolishNotation.h" />
+    <ClInclude Include="Ex064-MergeTwoSortedLists.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

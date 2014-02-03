@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Ex test file</Title>
+        </Header>
+        <Snippet>
+            <Code Language="cpp">
+                <![CDATA[#include "CppUnitTest.h"
+#include "Ex-Sample.h"
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace LeetCodeTestSolutions
+{		
+	TEST_CLASS(ExSampleTest)
+	{
+	public:
+		
+		TEST_METHOD(Ex0_Test_Sample)
+		{
+			ExSample ex;
+      Assert::AreEqual(2, ex.Sample(2));
+		}
+	};
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
