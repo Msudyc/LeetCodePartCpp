@@ -17,7 +17,7 @@ namespace LeetCodeTestSolutions
         TEST_METHOD(Ex115_Test_numDistinct1)
         {
             Ex115 ex;
-            Assert::AreEqual(1, ex.numDistinct("rabbit", "rabbit"));
+            Assert::AreEqual(2, ex.numDistinct("aab", "a"));
         }
 
         TEST_METHOD(Ex115_Test_numDistinct2)

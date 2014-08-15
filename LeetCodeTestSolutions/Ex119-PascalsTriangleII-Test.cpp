@@ -10,7 +10,8 @@ namespace LeetCodeTestSolutions
 
         TEST_METHOD(Ex119_Test_getRow)
         {
-            //TODO
+            Ex119 ex;
+            vector<int> r = ex.getRow(3);
         }
     };
 }

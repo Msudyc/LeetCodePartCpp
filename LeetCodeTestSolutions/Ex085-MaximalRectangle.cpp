@@ -18,6 +18,9 @@ namespace LeetCodeTestSolutions
     {
         if (matrix.empty()) return 0;
         int ret = 0, n = matrix[0].size(), m = matrix.size();
+        //L - the position of the left nearest 0 in this row 
+        //R - the position of the right nearest 0 in this row 
+
         vector<int> H(n), L(n), R(n, n);
         for (int i = 0; i < m; i++) 
         {

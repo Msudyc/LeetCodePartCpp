@@ -11,10 +11,10 @@ namespace LeetCodeTestSolutions
         TEST_METHOD(Ex091_Test_subsetsWithDup)
         {
             Ex91 ex;
-            int row0[] = {1, 2, 2};
+            int row0[] = {2, 2, 2, 2};
             vector<int> r0 (row0, row0 + sizeof(row0)/sizeof(int));
             vector<vector<int>> r = ex.subsetsWithDup(r0);
-            Assert::AreEqual(6, (int)r.size());
+            Assert::AreEqual(5, (int)r.size());
         }
 
         TEST_METHOD(Ex091_Test_subsetsWithDup1)
